@@ -120,6 +120,8 @@ repository root.
   than one resource per two calls needs a larger schedule (`--blocks`) to resolve.
 - Counts are process-wide. Run the probe in a dedicated process when other threads in
   the same process may open fds concurrently.
+- `probe` executes the target 32 times by default (the sum of `--blocks`). Use a
+  disposable process for targets with destructive side effects.
 
 ## Environment
 
