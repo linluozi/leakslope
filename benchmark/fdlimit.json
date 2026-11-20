@@ -1,0 +1,10 @@
+{
+  "command": "RLIMIT_NOFILE soft=hard=128; open('/dev/null') kept in a list",
+  "first_fail": {
+    "call": 126,
+    "errno": 24,
+    "error": "Too many open files"
+  },
+  "limit": 128,
+  "opened": 125
+}

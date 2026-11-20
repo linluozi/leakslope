@@ -1,0 +1,57 @@
+{
+  "kind": "leak",
+  "naive": {
+    "calls": 32,
+    "fd_growth": 0,
+    "flags": true,
+    "thread_growth": 32
+  },
+  "scenario": "leak_thread",
+  "slope": {
+    "axes": [
+      {
+        "attribution": {},
+        "axis": "fd",
+        "label": "clean",
+        "per_call": 0.0,
+        "r2": 1.0,
+        "total": 0
+      },
+      {
+        "attribution": {},
+        "axis": "thread",
+        "label": "leak",
+        "per_call": 1.0,
+        "r2": 1.0,
+        "total": 32
+      }
+    ],
+    "calls": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "fd_growth": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "thread_growth": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "total_calls": 32,
+    "verdict": "leak"
+  },
+  "trial": 2
+}

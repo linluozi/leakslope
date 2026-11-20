@@ -1,0 +1,57 @@
+{
+  "kind": "clean",
+  "naive": {
+    "calls": 32,
+    "fd_growth": 0,
+    "flags": false,
+    "thread_growth": 0
+  },
+  "scenario": "clean_sqlite_memory",
+  "slope": {
+    "axes": [
+      {
+        "attribution": {},
+        "axis": "fd",
+        "label": "clean",
+        "per_call": 0.0,
+        "r2": 1.0,
+        "total": 0
+      },
+      {
+        "attribution": {},
+        "axis": "thread",
+        "label": "clean",
+        "per_call": 0.0,
+        "r2": 1.0,
+        "total": 0
+      }
+    ],
+    "calls": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "fd_growth": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "thread_growth": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "total_calls": 32,
+    "verdict": "clean"
+  },
+  "trial": 2
+}
