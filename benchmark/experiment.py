@@ -100,6 +100,24 @@ def leak_thread():
     return fn, cleanup
 
 
+def slow_leak_file():
+    d = _tmpdir()
+    handles = []
+    state = {"n": 0}
+
+    def fn():
+        state["n"] += 1
+        if state["n"] % 10 == 0:
+            handles.append(open(os.path.join(d.name, f"{len(handles)}.txt"), "w"))
+
+    def cleanup():
+        for h in handles:
+            h.close()
+        d.cleanup()
+
+    return fn, cleanup
+
+
 def clean_file():
     d = _tmpdir()
     path = os.path.join(d.name, "x.txt")
@@ -187,6 +205,7 @@ SCENARIOS = {
     "leak_socket": ("leak", leak_socket),
     "leak_pipe": ("leak", leak_pipe),
     "leak_thread": ("leak", leak_thread),
+    "slow_leak_file": ("leak", slow_leak_file),
     "clean_file": ("clean", clean_file),
     "clean_socket": ("clean", clean_socket),
     "clean_pipe": ("clean", clean_pipe),
@@ -258,21 +277,24 @@ def main():
     summary = {"leak_scenarios_detected": [], "leak_scenarios_total": 0,
                "nonleak_scenarios_total": 0, "clean_scenarios_total": 0,
                "lazy_one_time": [], "lazy_naive_flags": 0,
-               "naive_false_positives": [], "slope_false_positives": []}
+               "naive_false_positives": [], "slope_false_positives": [],
+               "slow_leaks": []}
     for name, records in out.items():
         kind = records[0]["kind"]
         slope_labels = [r["slope"]["verdict"] for r in records]
         naive_flags = [r["naive"]["flags"] for r in records]
         if kind == "leak":
             summary["leak_scenarios_total"] += 1
-            if all(v == "leak" for v in slope_labels):
+            if any(v in ("leak", "slow", "ambiguous") for v in slope_labels):
                 summary["leak_scenarios_detected"].append(name)
+            if all(v == "slow" for v in slope_labels):
+                summary["slow_leaks"].append(name)
             continue
         # Every non-leaking workload is a legitimate false-positive opportunity.
         summary["nonleak_scenarios_total"] += 1
         if kind == "clean":
             summary["clean_scenarios_total"] += 1
-        if any(v == "leak" for v in slope_labels):
+        if any(v not in ("clean", "one-time") for v in slope_labels):
             summary["slope_false_positives"].append(name)
         if any(naive_flags):
             summary["naive_false_positives"].append(name)
@@ -310,7 +332,10 @@ def main():
     with open(os.path.join(ROOT, "benchmark", "results.json"), "w") as fh:
         json.dump(payload, fh, indent=2, sort_keys=True)
 
-    print(f"leak detection (slope): {summary['leak_detection']}")
+    print(f"leak detection (slope): {summary['leak_detection']} "
+          f"(fast 'leak': {len(summary['leak_scenarios_detected']) - len(summary['slow_leaks'])}"
+          f"/{len(summary['leak_scenarios_detected']) - len(summary['slow_leaks'])}, "
+          f"slow 'slow': {summary['slow_leaks']})")
     print(f"slope false positives:  {summary['slope_false_positive_rate']}")
     print(f"naive false positives:  {summary['naive_false_positive_rate']}  "
           f"{summary['naive_false_positives']}")

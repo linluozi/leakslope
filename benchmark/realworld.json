@@ -2177,7 +2177,7 @@
   },
   "summary": {
     "cases": 23,
-    "elapsed_sec": 0.081,
+    "elapsed_sec": 0.096,
     "false_positive_rate": "0/23",
     "leak_verdicts": {},
     "one_time": [],

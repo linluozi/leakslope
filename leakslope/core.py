@@ -74,14 +74,27 @@ def ols(xs, ys):
     return slope, intercept, r2
 
 
-def _label(total: int, slope: float, r2: float, leak_slope: float = 0.5) -> str:
+def _classify(ys, slope: float, r2: float,
+              leak_slope: float = 0.5, ambiguous_slope: float = 0.2) -> str:
+    """Label a growth series.
+
+    A genuine one-time initialisation is not "small slope": it is growth that
+    *stops* after the first measured point.  Growth that keeps accumulating is a
+    leak, even if the per-call rate is below ``leak_slope`` -- it is reported as
+    ``slow`` instead of being hidden behind the one-time label.
+    """
+    if not ys:
+        return "clean"
+    total = ys[-1]
     if total == 0:
         return "clean"
+    if ys[0] > 0 and all(g <= ys[0] for g in ys[1:]):
+        return "one-time"
     if slope >= leak_slope and r2 >= 0.90:
         return "leak"
-    if abs(slope) < 0.20:
-        return "one-time"
-    return "ambiguous"
+    if abs(slope) >= ambiguous_slope:
+        return "ambiguous"
+    return "slow"
 
 
 @dataclass
@@ -119,6 +132,11 @@ def probe(fn, blocks=DEFAULT_BLOCKS, proc: str = PROC) -> dict:
     sum of ``blocks`` (default 1,2,4,8,16,32).  No warmup is performed: the
     point is to keep a possible first-call initialisation inside the window.
     """
+    if len(blocks) < 2:
+        raise ValueError("probe needs at least two call blocks; "
+                         "a single block cannot estimate a slope")
+    if any(int(b) <= 0 for b in blocks):
+        raise ValueError("block sizes must be positive integers")
     base = snapshot(proc)
     xs, fd_ys, th_ys = [], [], []
     calls = 0
@@ -135,19 +153,21 @@ def probe(fn, blocks=DEFAULT_BLOCKS, proc: str = PROC) -> dict:
     fd_slope, _, fd_r2 = ols(xs, fd_ys)
     th_slope, _, th_r2 = ols(xs, th_ys)
     fd_axis = Axis("fd", fd_ys[-1], fd_slope, fd_r2,
-                   _label(fd_ys[-1], fd_slope, fd_r2), _attribution(base, end))
+                   _classify(fd_ys, fd_slope, fd_r2), _attribution(base, end))
     th_axis = Axis("thread", th_ys[-1], th_slope, th_r2,
-                   _label(th_ys[-1], th_slope, th_r2), {})
+                   _classify(th_ys, th_slope, th_r2), {})
     axes = [fd_axis, th_axis]
     labels = {a.label for a in axes}
     if "leak" in labels:
         overall = "leak"
-    elif labels <= {"clean"}:
-        overall = "clean"
+    elif "slow" in labels:
+        overall = "slow"
     elif "ambiguous" in labels:
         overall = "ambiguous"
-    else:
+    elif "one-time" in labels:
         overall = "one-time"
+    else:
+        overall = "clean"
     return {
         "calls": xs,
         "fd_growth": fd_ys,

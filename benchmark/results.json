@@ -14,7 +14,7 @@
     "python": "3.12.3",
     "rng": "none (deterministic schedule; no random sampling)"
   },
-  "generated_at": "2026-11-20T22:05:01+08:00",
+  "generated_at": "2026-11-20T22:15:10+08:00",
   "method": {
     "blocks": [
       1,
@@ -2102,30 +2102,210 @@
         },
         "trial": 3
       }
+    ],
+    "slow_leak_file": [
+      {
+        "kind": "leak",
+        "naive": {
+          "calls": 32,
+          "fd_growth": 3,
+          "flags": true,
+          "thread_growth": 0
+        },
+        "slope": {
+          "axes": [
+            {
+              "attribution": {
+                "file": 3
+              },
+              "axis": "fd",
+              "label": "slow",
+              "per_call": 0.0995,
+              "r2": 0.9498,
+              "total": 3
+            },
+            {
+              "attribution": {},
+              "axis": "thread",
+              "label": "clean",
+              "per_call": 0.0,
+              "r2": 1.0,
+              "total": 0
+            }
+          ],
+          "calls": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32
+          ],
+          "fd_growth": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            3
+          ],
+          "thread_growth": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "total_calls": 32,
+          "verdict": "slow"
+        },
+        "trial": 1
+      },
+      {
+        "kind": "leak",
+        "naive": {
+          "calls": 32,
+          "fd_growth": 3,
+          "flags": true,
+          "thread_growth": 0
+        },
+        "slope": {
+          "axes": [
+            {
+              "attribution": {
+                "file": 3
+              },
+              "axis": "fd",
+              "label": "slow",
+              "per_call": 0.0995,
+              "r2": 0.9498,
+              "total": 3
+            },
+            {
+              "attribution": {},
+              "axis": "thread",
+              "label": "clean",
+              "per_call": 0.0,
+              "r2": 1.0,
+              "total": 0
+            }
+          ],
+          "calls": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32
+          ],
+          "fd_growth": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            3
+          ],
+          "thread_growth": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "total_calls": 32,
+          "verdict": "slow"
+        },
+        "trial": 2
+      },
+      {
+        "kind": "leak",
+        "naive": {
+          "calls": 32,
+          "fd_growth": 3,
+          "flags": true,
+          "thread_growth": 0
+        },
+        "slope": {
+          "axes": [
+            {
+              "attribution": {
+                "file": 3
+              },
+              "axis": "fd",
+              "label": "slow",
+              "per_call": 0.0995,
+              "r2": 0.9498,
+              "total": 3
+            },
+            {
+              "attribution": {},
+              "axis": "thread",
+              "label": "clean",
+              "per_call": 0.0,
+              "r2": 1.0,
+              "total": 0
+            }
+          ],
+          "calls": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32
+          ],
+          "fd_growth": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            3
+          ],
+          "thread_growth": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "total_calls": 32,
+          "verdict": "slow"
+        },
+        "trial": 3
+      }
     ]
   },
   "summary": {
     "aa_clean": "30/30",
     "clean_scenarios_total": 7,
-    "elapsed_sec": 0.352,
+    "elapsed_sec": 0.338,
     "lazy_naive_flags": 3,
     "lazy_one_time": [
       "lazy_sqlite_file"
     ],
-    "leak_detection": "4/4",
+    "leak_detection": "5/5",
     "leak_scenarios_detected": [
       "leak_file",
       "leak_socket",
       "leak_pipe",
-      "leak_thread"
+      "leak_thread",
+      "slow_leak_file"
     ],
-    "leak_scenarios_total": 4,
+    "leak_scenarios_total": 5,
     "naive_false_positive_rate": "1/8",
     "naive_false_positives": [
       "lazy_sqlite_file"
     ],
     "nonleak_scenarios_total": 8,
     "slope_false_positive_rate": "0/8",
-    "slope_false_positives": []
+    "slope_false_positives": [],
+    "slow_leaks": [
+      "slow_leak_file"
+    ]
   }
 }

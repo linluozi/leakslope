@@ -42,10 +42,23 @@ class Ols(unittest.TestCase):
 
 class Labels(unittest.TestCase):
     def test_labels(self):
-        self.assertEqual(core._label(0, 0.0, 1.0), "clean")
-        self.assertEqual(core._label(32, 1.0, 1.0), "leak")
-        self.assertEqual(core._label(1, 0.03, 0.4), "one-time")
-        self.assertEqual(core._label(20, 0.62, 0.2), "ambiguous")
+        self.assertEqual(core._classify([0, 0, 0], 0.0, 1.0), "clean")
+        self.assertEqual(core._classify([1, 2, 4, 8, 16, 32], 1.0, 1.0), "leak")
+        self.assertEqual(core._classify([1, 1, 1, 1], 0.0, 1.0), "one-time")
+        self.assertEqual(core._classify([0, 0, 0, 0, 1, 3], 0.0995, 0.95), "slow")
+        self.assertEqual(core._classify([0, 0, 1, 2, 4, 8], 0.25, 0.95), "ambiguous")
+        # growth that is not a clean line is not promoted to "leak"
+        self.assertEqual(core._classify([0, 0, 0, 0, 16, 32], 1.0, 0.60), "ambiguous")
+
+
+class ScheduleValidation(unittest.TestCase):
+    def test_single_block_rejected(self):
+        with self.assertRaises(ValueError):
+            core.probe(lambda: None, blocks=(32,))
+
+    def test_empty_blocks_rejected(self):
+        with self.assertRaises(ValueError):
+            core.probe(lambda: None, blocks=())
 
 
 class RealLeaks(unittest.TestCase):
@@ -119,6 +132,23 @@ class RealLeaks(unittest.TestCase):
         self.assertEqual(th_axis["total"], 8)
         self.assertAlmostEqual(th_axis["per_call"], 1.0, places=9)
 
+    def test_slow_leak_is_reported_as_slow(self):
+        handles = []
+        state = {"n": 0}
+        with tempfile.TemporaryDirectory() as tmp:
+            def slow():
+                state["n"] += 1
+                if state["n"] % 10 == 0:
+                    handles.append(open(os.path.join(tmp, f"{len(handles)}.txt"), "w"))
+            try:
+                result = core.probe(slow, blocks=(1, 1, 2, 4, 8, 16))
+            finally:
+                for h in handles:
+                    h.close()
+        self.assertEqual(result["verdict"], "slow")
+        self.assertAlmostEqual(result["axes"][0]["per_call"], 0.0995, places=4)
+        self.assertEqual(result["axes"][0]["total"], 3)
+
     def test_aa_runs_are_clean(self):
         for _ in range(12):
             result = core.probe(lambda: None, blocks=(1, 1, 2, 4, 8))
@@ -151,6 +181,48 @@ class CliBehaviour(unittest.TestCase):
         payload = json.loads(out)
         self.assertEqual(payload["verdict"], "leak")
         self.assertAlmostEqual(payload["axes"][0]["per_call"], 1.0, places=9)
+
+    def test_single_block_is_a_usage_error(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = os.path.join(tmp, "target.py")
+            with open(path, "w") as fh:
+                fh.write("def f():\n    return 1\n")
+            for blocks in ("32", ""):
+                with contextlib.redirect_stderr(io.StringIO()):
+                    with self.assertRaises(SystemExit) as ctx:
+                        cli.main(["probe", f"{path}:f", "--blocks", blocks])
+                self.assertEqual(ctx.exception.code, 2)
+
+    def test_slow_leak_exit_one(self):
+        code, out = self._run(
+            "KEEP = []\n"
+            "STATE = {'n': 0}\n"
+            "def f():\n"
+            "    STATE['n'] += 1\n"
+            "    if STATE['n'] % 10 == 0:\n"
+            "        KEEP.append(open('/dev/null'))\n", "f")
+        self.assertEqual(code, 1)
+        self.assertIn("label=slow", out)
+
+    def test_naive_runs_in_a_fresh_process(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = os.path.join(tmp, "target.py")
+            db = os.path.join(tmp, "lazy.txt")
+            with open(path, "w") as fh:
+                fh.write(
+                    "STATE = {'fh': None}\n"
+                    "def lazy():\n"
+                    "    if STATE['fh'] is None:\n"
+                    f"        STATE['fh'] = open({db!r}, 'w')\n"
+                    "    STATE['fh'].write('x')\n")
+            buf = io.StringIO()
+            with contextlib.redirect_stdout(buf):
+                code = cli.main(["probe", f"{path}:lazy", "--naive", "--json"])
+        self.assertEqual(code, 0)
+        payload = json.loads(buf.getvalue())
+        self.assertEqual(payload["verdict"], "one-time")
+        self.assertTrue(payload["naive"]["flags"])
+        self.assertEqual(payload["naive"]["fd_growth"], 1)
 
     def test_naive_flag_in_output(self):
         code, out = self._run(
