@@ -66,6 +66,14 @@ Three-trial medians; all 36 per-trial verdicts agreed with the median. Summary f
   (one fd created on the first call and reused afterwards);
 - A/A calibration: **30/30** sweeps of a no-op classified `clean`.
 
+A second arm checks the opposite direction on code nobody in this repository wrote:
+`benchmark/realworld.py` probes **23 standard-library callables** (json, re, hashlib,
+zlib, gzip, csv, urllib.parse, pathlib, os.stat, tempfile, socketpair, subprocess,
+sqlite3, datetime, random, math, statistics, uuid) twice each. Result: **0/23** leak
+verdicts, **0/23** one-time, 46 raw records under `benchmark/raw/realworld/`, 0.081 s.
+The only resource-opening cases (`TemporaryFile`, `mkstemp`, `socketpair`, sqlite3)
+close their resource inside the call, and the slope says so.
+
 The leak is not theoretical: `benchmark/fdlimit.py` runs a child with
 `RLIMIT_NOFILE` soft=hard=128 and keeps every opened file. The first `EMFILE`
 (`errno 24`) arrives at **call 126** after **125** successful opens (3 fds already
@@ -98,6 +106,7 @@ repository root.
 | timing/rate accuracy (G3) | 4/4 leaks at exact rate, r²=1.000 | same |
 | real-workload false positives (G3b) | 0/8 slope vs 1/8 naive | same |
 | A/A calibration (G4) | 30/30 clean | same |
+| real-corpus false positives | 0/23 stdlib callables, 46 records | `python3 benchmark/realworld.py` |
 | memory (G5) | N/A — measurement is O(1) counters, no allocation per call | — |
 | mechanism check | EMFILE at call 126 with limit 128 | `python3 benchmark/fdlimit.py` |
 
@@ -117,7 +126,8 @@ repository root.
 - CPython 3.12.3, Linux 6.8.0-124-generic x86_64 (glibc 2.39)
 - AMD EPYC 7K62, 4 vCPU, 3,812,564 kB RAM
 - No RNG: the call schedule is deterministic, so no seed is involved.
-- Result files: `benchmark/results.json`, `benchmark/fdlimit.json`, `benchmark/raw/*.json`.
+- Result files: `benchmark/results.json`, `benchmark/realworld.json`,
+  `benchmark/fdlimit.json`, `benchmark/raw/*.json`.
 
 ## 本轮创新
 

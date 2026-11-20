@@ -1,0 +1,2187 @@
+{
+  "cases": {
+    "base64.b64encode": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "csv.reader": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "datetime.now": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "gzip.compress": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "hashlib.sha256": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "json.dumps": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "json.loads": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "math.fsum": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "os.stat": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "pathlib.read_text": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "random.Random": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "re.compile_cached": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "re.match": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "socket.socketpair": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "sqlite3.memory": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "statistics.median": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "subprocess.run": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "tempfile.TemporaryFile": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "tempfile.mkstemp": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "urllib.parse.urlencode": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "urllib.parse.urlparse": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "uuid.uuid4": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ],
+    "zlib.compress": [
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      },
+      {
+        "axes": [
+          {
+            "attribution": {},
+            "axis": "fd",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          },
+          {
+            "attribution": {},
+            "axis": "thread",
+            "label": "clean",
+            "per_call": 0.0,
+            "r2": 1.0,
+            "total": 0
+          }
+        ],
+        "calls": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "fd_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "thread_growth": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_calls": 32,
+        "verdict": "clean"
+      }
+    ]
+  },
+  "method": {
+    "arm": "real standard-library callables, no injected leak",
+    "blocks": [
+      1,
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "trials_per_case": 2
+  },
+  "summary": {
+    "cases": 23,
+    "elapsed_sec": 0.081,
+    "false_positive_rate": "0/23",
+    "leak_verdicts": {},
+    "one_time": [],
+    "raw_records": 46,
+    "trials_per_case": 2
+  }
+}

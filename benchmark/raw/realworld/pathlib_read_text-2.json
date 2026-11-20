@@ -1,0 +1,48 @@
+{
+  "axes": [
+    {
+      "attribution": {},
+      "axis": "fd",
+      "label": "clean",
+      "per_call": 0.0,
+      "r2": 1.0,
+      "total": 0
+    },
+    {
+      "attribution": {},
+      "axis": "thread",
+      "label": "clean",
+      "per_call": 0.0,
+      "r2": 1.0,
+      "total": 0
+    }
+  ],
+  "calls": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "case": "pathlib.read_text",
+  "fd_growth": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "thread_growth": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "total_calls": 32,
+  "trial": 2,
+  "verdict": "clean"
+}
