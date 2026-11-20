@@ -70,7 +70,7 @@ A second arm checks the opposite direction on code nobody in this repository wro
 `benchmark/realworld.py` probes **23 standard-library callables** (json, re, hashlib,
 zlib, gzip, csv, urllib.parse, pathlib, os.stat, tempfile, socketpair, subprocess,
 sqlite3, datetime, random, math, statistics, uuid) twice each. Result: **0/23** leak
-verdicts, **0/23** one-time, 46 raw records under `benchmark/raw/realworld/`, 0.081 s.
+verdicts, **0/23** one-time, 46 raw records under `benchmark/raw/realworld/`, 0.08-0.09 s across two runs.
 The only resource-opening cases (`TemporaryFile`, `mkstemp`, `socketpair`, sqlite3)
 close their resource inside the call, and the slope says so.
 
